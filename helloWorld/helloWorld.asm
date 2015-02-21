@@ -25,7 +25,7 @@ main:               ;Entry point of program
                 ;;Bottom part of boilerplate code
     pop edi         ;program restores saved register values by
     pop esi             ;popping them from the stack as they
-    pop ebx             ;were pushed from the beggining
+    pop ebx             ;were pushed from the beginning
     mov esp, ebp        ;destorys stack frame before returning
     pop ebp
     ret             ;returns the control to Linux
@@ -33,4 +33,4 @@ main:               ;Entry point of program
     [SECTION .data]   ;section containing initialized data
         hw    db    "Hello World",10,0    ;defines name to be the string "Hello World!"
 
-    [SECTION .bss]    ;Section contianing unitialized data
+    [SECTION .bss]    ;Section containing initialized data
